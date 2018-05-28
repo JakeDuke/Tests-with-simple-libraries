@@ -16,9 +16,3 @@ Todo.updateTodo(0, 'lol');
 tressa.assert(JSON.stringify(Todo.readAll()) === JSON.stringify({ '0': 'lol', '1': 'two', '2': 'three' })
 , "object modifying");
 
-// add one thing
-// add one thing
-// add one thing
-// update third thing
-// delete first 
-// assert(readAll() == {what should be in the database})

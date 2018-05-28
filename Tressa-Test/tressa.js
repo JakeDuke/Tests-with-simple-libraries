@@ -1,9 +1,4 @@
-/*! (C) 2017 Andrea Giammarchi & Claudio D'angelis */
 
-// used to assert conditions
-// equivalent of console.assert(...args)
-// tressa(true)
-// tressa(true, 'what am I testing')
 function tressa(condition, message) {
     try {
       console.assert.apply(console, arguments);
@@ -18,25 +13,14 @@ function tressa(condition, message) {
     }
   }
   
-  // on top of the test to show a nice title
-  // test.title('My Library');
+
   tressa.title = function (title) {
     tressa.testName = title;
     tressa.console.info('# ' + title);
     console.time(title);
   };
   
-  // for asynchronous tests
-  /*
-  tressa.async(done => {
-    // later on ...
-    tressa(1);
-    setTimeout(() => {
-      tressa(2);
-      done();
-    });
-  });
-  */
+
   tressa.async = function (fn, timeout) {
     var
       resolve = Object,
